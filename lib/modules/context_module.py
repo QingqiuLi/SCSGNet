@@ -45,6 +45,5 @@ class SPFF(nn.Module):
 
         x_cat = self.conv_cat(torch.cat((x0, x01, x012, x0123), 1))
         x = self.relu(x_cat + self.conv_res(x))
-        x = self.relu(x0 + self.conv_res(x))
 
         return x
